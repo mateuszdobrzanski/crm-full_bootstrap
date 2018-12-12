@@ -1,6 +1,7 @@
 package com.luv2code.springdemo.entity;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="customer")
@@ -27,7 +30,8 @@ public class Customer {
 	@Column(name="email")
 	private String email;
 	
-	@Column(name="birth_date")
+	@Column(name="birth_date", columnDefinition="DATE")
+	//@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private Date birthDate;
 	
 	@Column(name="city_of_birth")
