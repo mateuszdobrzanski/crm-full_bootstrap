@@ -132,7 +132,7 @@
 	<!-- Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>crm-with-security-jdbc-encryption-authentication</finalName>
+		<finalName>crm</finalName>
 	
 		<pluginManagement>
 			<plugins>
