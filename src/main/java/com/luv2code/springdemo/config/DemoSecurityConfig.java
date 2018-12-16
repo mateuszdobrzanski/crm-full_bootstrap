@@ -27,7 +27,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-		// use jdbc authentication ... oh yeah!!!
+		// use jdbc authentication
 		
 		auth.jdbcAuthentication().dataSource(securityDataSource);
 
@@ -35,6 +35,8 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		
+		// support full utf8 encoding
 		
 		CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
 		encodingFilter.setEncoding("UTF-8");

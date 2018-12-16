@@ -79,7 +79,7 @@
 			    </div>
 			  </div>
 			  <br><br>
-			  <input type="submit" class="btn btn-primary" value="Dodaj pracownika" />
+			  <input type="submit" class="btn btn-primary" value="Zapisz pracownika" />
 		</form:form>
 		<br>
 		<p>
